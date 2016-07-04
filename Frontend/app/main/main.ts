@@ -1,6 +1,5 @@
 ﻿/// <reference path="../../typings/custom.d.ts" />
-import {Component} from "angular2/core";
-
+import { Component } from '@angular/core';
 
 var styles = require("./main.css")
 console.log("Before styles");

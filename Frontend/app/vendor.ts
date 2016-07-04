@@ -2,8 +2,9 @@
 import 'zone.js/dist/zone.min.js';
 import 'reflect-metadata';
 
-import 'angular2/platform/browser';
-import 'angular2/core';
-import 'angular2/common';
-import 'angular2/http';
-import 'angular2/router';
+import '@angular/platform-browser';
+import '@angular/platform-browser-dynamic';
+import '@angular/core';
+import '@angular/common';
+import '@angular/http';
+import '@angular/router';
