@@ -1,0 +1,14 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/Frontend/bin
+/Frontend/obj
+/Frontend/node_modules
+/Frontend/typings
+/Frontend/wwwroot/vendor.js.map
+/Frontend/wwwroot/vendor.js
+/Frontend/wwwroot/app.js.map
+/Frontend/wwwroot/app.js
+/Frontend/Frontend.xproj.user
+/Frontend/project.lock.json
