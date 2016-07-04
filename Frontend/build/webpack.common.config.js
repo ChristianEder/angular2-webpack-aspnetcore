@@ -15,10 +15,15 @@ module.exports = {
     module: {
         loaders: [
             { test: /\.html$/, loader: 'raw' },
-            { test: /\.ts$/, loader: 'ts' }
+            { test: /\.ts$/, loader: 'ts' },
             //{ test: /\.scss$/, loader: 'raw!sass' },
-            //{ test: /\.css$/, loader: 'style!css' },
-            //{ test: /\.png$/, loader: "url-loader?mimetype=image/png" },
+            { test: /\.css$/, loaders: ['css-to-string-loader', 'css-loader'] },
+            {
+                test: /\.png$/, loader: "file", query: {
+                    emitFile: true,
+                    name: "../wwwroot/assets/images/[name].[ext]"
+                }
+            },
             //{ test: /\.gif$/, loader: "url-loader?mimetype=image/gif" },
             //{ test: /\.(woff|woff2|eot|ttf|svg)(\?.*)?$/, loader: 'file-loader?name=wwwroot/fonts/[name].[ext]' },
             //{ test: /jquery\.js$/, loader: 'expose?$' },
