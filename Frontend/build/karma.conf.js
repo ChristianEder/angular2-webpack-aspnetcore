@@ -26,11 +26,11 @@ module.exports = function (config) {
          */
         files: [
            './node_modules/phantomjs-polyfill/bind-polyfill.js',
-            './build/tests.ts'
+            './build/tests.js'
         ],
-        
+
         preprocessors: {
-            'build/tests.ts': ['webpack']
+            'build/tests.js': ['coverage', 'webpack', 'sourcemap']
         },
 
         webpackMiddleware: {
@@ -46,24 +46,29 @@ module.exports = function (config) {
         reporters: [
              'dots',
              'spec',
-             'coverage'
+             'mocha',
+             'coverage',
+             'karma-remap-istanbul'
         ],
+
         coverageReporter: {
             reporters: [
-                {
-                    dir: 'coverage/',
-                    subdir: '.',
-                    type: 'html'
-                },{
-                    dir: 'coverage/',
-                    subdir: '.',
-                    type: 'cobertura'
-                }, {
-                    dir: 'coverage/',
-                    subdir: '.',
-                    type: 'json'
-                }
+               {
+                   dir: 'coverage/js/',
+                   subdir: '.',
+                   type: 'json'
+               }
             ]
+        },
+
+        remapIstanbulReporter: {
+            src: 'coverage/js/coverage-final.json',
+            reports: {
+                html: 'coverage/ts',
+                json: 'coverage/ts/coverage-final.json'
+            },
+            timeoutNotCreated: 10000, // default value 
+            timeoutNoMoreFiles: 10000 // default value 
         },
 
         // web server port

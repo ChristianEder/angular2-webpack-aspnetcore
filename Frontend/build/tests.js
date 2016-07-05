@@ -1,8 +1,8 @@
 ﻿// this file is only being used by karma
 require('phantomjs-polyfill');
 
-requireAll((<any>require).context("../app/", true, /spec.ts$/));
+requireAll((require).context("../app/", true, /spec.ts$/));
 
-function requireAll(r: any): any {
+function requireAll(r) {
     r.keys().forEach(r);
 }
