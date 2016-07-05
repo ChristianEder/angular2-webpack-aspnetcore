@@ -5,7 +5,6 @@
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
     <TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
   </PropertyGroup>
-
   <Import Project="$(VSToolsPath)\DotNet\Microsoft.DotNet.Props" Condition="'$(VSToolsPath)' != ''" />
   <PropertyGroup Label="Globals">
     <ProjectGuid>1fa6e611-7b4b-40db-b473-3739358e321d</ProjectGuid>
@@ -14,7 +13,6 @@
     <OutputPath Condition="'$(OutputPath)'=='' ">.\bin\</OutputPath>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
   </PropertyGroup>
-
   <PropertyGroup>
     <SchemaVersion>2.0</SchemaVersion>
   </PropertyGroup>
@@ -23,6 +21,7 @@
     <DnxInvisibleContent Include=".bowerrc" />
     <DnxInvisibleContent Include="wwwroot\app.js" />
     <DnxInvisibleContent Include="wwwroot\vendor.js" />
+    <DnxInvisibleFolder Include="coverage\" />
     <DnxInvisibleFolder Include="wwwroot\assets" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\DotNet.Web\Microsoft.DotNet.Web.targets" Condition="'$(VSToolsPath)' != ''" />

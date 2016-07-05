@@ -16,7 +16,6 @@ module.exports = {
         loaders: [
             { test: /\.html$/, loader: 'raw' },
             { test: /\.ts$/, loader: 'ts' },
-            //{ test: /\.scss$/, loader: 'raw!sass' },
             { test: /\.css$/, loaders: ['css-to-string-loader', 'css-loader'] },
             {
                 test: /\.png$/, loader: "file", query: {

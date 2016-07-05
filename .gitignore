@@ -15,3 +15,6 @@
 /.vs/Frontend/v14/.suo
 /.vs/config/applicationhost.config
 /Frontend/wwwroot/assets
+/Frontend/coverage/Chrome 51.0.2704 (Windows 7 0.0.0)
+/Frontend/npm-debug.log
+/Frontend/coverage

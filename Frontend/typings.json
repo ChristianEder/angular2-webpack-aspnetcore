@@ -2,5 +2,8 @@
   "globalDependencies": {
     "es6-shim": "github:DefinitelyTyped/DefinitelyTyped/es6-shim/es6-shim.d.ts",
     "hammerjs": "github:DefinitelyTyped/DefinitelyTyped/hammerjs/hammerjs.d.ts"
+  },
+  "globalDevDependencies": {
+    "jasmine": "registry:dt/jasmine"
   }
 }
