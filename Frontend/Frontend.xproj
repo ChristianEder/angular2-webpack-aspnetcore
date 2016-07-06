@@ -21,7 +21,7 @@
     <DnxInvisibleContent Include=".bowerrc" />
     <DnxInvisibleContent Include="wwwroot\app.js" />
     <DnxInvisibleContent Include="wwwroot\vendor.js" />
-    <DnxInvisibleFolder Include="coverage\" />
+    <DnxInvisibleFolder Include="test\unit\coverage\" />
     <DnxInvisibleFolder Include="typings\" />
     <DnxInvisibleFolder Include="wwwroot\assets" />
   </ItemGroup>

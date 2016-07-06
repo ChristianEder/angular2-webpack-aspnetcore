@@ -17,4 +17,4 @@
 /Frontend/wwwroot/assets
 /Frontend/coverage/Chrome 51.0.2704 (Windows 7 0.0.0)
 /Frontend/npm-debug.log
-/Frontend/coverage
+/Frontend/test/unit/coverage

@@ -13,11 +13,11 @@
             { test: /\.ts$/, loader: 'ts' },
             { test: /\.css$/, loaders: ['css-to-string-loader', 'css-loader'] },
             {
-                test: /\.png$/, loader: "file", query: {
-                    emitFile: true,
-                    name: "../wwwroot/assets/images/[name].[ext]"
-                }
-            },
+                    test: /\.png$/, loader: "file", query: {
+                        emitFile: true,
+                                name: "../wwwroot/assets/images/[name].[ext]"
+                                }
+            }
         ],
         postLoaders: [
           {

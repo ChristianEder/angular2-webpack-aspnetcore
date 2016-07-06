@@ -25,12 +25,12 @@ module.exports = function (config) {
          * we are building the test environment in ./spec-bundle.js
          */
         files: [
-           './node_modules/phantomjs-polyfill/bind-polyfill.js',
-            './build/specs.js'
+           './../../node_modules/phantomjs-polyfill/bind-polyfill.js',
+            './specs.js'
         ],
 
         preprocessors: {
-            'build/specs.js': ['coverage', 'webpack', 'sourcemap']
+            'specs.js': ['coverage', 'webpack', 'sourcemap']
         },
 
         webpackMiddleware: {
@@ -62,10 +62,10 @@ module.exports = function (config) {
         },
 
         remapIstanbulReporter: {
-            src: 'coverage/js/coverage-final.json',
+            src: 'test/unit/coverage/js/coverage-final.json',
             reports: {
-                html: 'coverage/ts',
-                json: 'coverage/ts/coverage-final.json'
+                html: 'test/unit/coverage/ts',
+                json: 'test/unit/coverage/ts/coverage-final.json'
             },
             timeoutNotCreated: 10000, // default value 
             timeoutNoMoreFiles: 10000 // default value 
