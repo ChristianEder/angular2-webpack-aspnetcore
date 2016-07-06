@@ -26,11 +26,11 @@ module.exports = function (config) {
          */
         files: [
            './node_modules/phantomjs-polyfill/bind-polyfill.js',
-            './build/tests.js'
+            './build/specs.js'
         ],
 
         preprocessors: {
-            'build/tests.js': ['coverage', 'webpack', 'sourcemap']
+            'build/specs.js': ['coverage', 'webpack', 'sourcemap']
         },
 
         webpackMiddleware: {

@@ -8,13 +8,6 @@
     },
     devtool: "inline-source-map",
     module: {
-        //preLoaders: [
-        //    {
-        //        test: /\.js$/,
-        //        loader: 'source-map-loader',
-        //        exclude: []
-        //    }
-        //],
         loaders: [
             { test: /\.html$/, loader: 'raw' },
             { test: /\.ts$/, loader: 'ts' },
