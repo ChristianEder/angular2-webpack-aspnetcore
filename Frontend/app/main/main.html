@@ -3,9 +3,9 @@
     <div class="text">App main content</div>
 
    <div>
-       <input type="text" [(ngModel)]="input" />
-       <button md-raised-button class="md-raised md-primary" (click)="translate()">Hello</button>
-       <div [innerHTML]="output"></div>
+       <input type="text" [(ngModel)]="input" id="translationInput" />
+       <button md-raised-button class="md-raised md-primary" (click)="translate()" id="translationButton">Hello</button>
+       <div [innerHTML]="output" id="translationOutput"></div>
    </div>
 
 

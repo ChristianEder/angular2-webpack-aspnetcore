@@ -26,7 +26,10 @@
 
   "buildOptions": {
     "emitEntryPoint": true,
-    "preserveCompilationContext": true
+    "preserveCompilationContext": true,
+    "compile": {
+      "exclude": ["node_modules"]
+    }
   },
 
   "runtimeOptions": {
@@ -41,9 +44,9 @@
       "web.config"
     ]
   },
-
+  
   "scripts": {
     "postpublish": [ "dotnet publish-iis --publish-folder %publish:OutputPath% --framework %publish:FullTargetFramework%" ],
-    "postcompile": "node_modules\\.bin\\webpack.cmd"
+    "postcompile": "npm run build"
   }
 }

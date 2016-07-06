@@ -3,10 +3,11 @@
   "name": "angular2-netcore-template",
   "private": true,
   "scripts": {
-    "postinstall": "typings install",
-    "unit-test": "karma start --NODE_ENV=test",
-    "build": "webpack",
-    "dev": "webpack-dev-server"
+    "postinstall": "typings install && webdriver-manager update",
+    "build": "webpack --NODE_ENV=prod",
+    "dev": "webpack-dev-server --NODE_ENV=dev",
+    "test": "karma start --NODE_ENV=test",
+    "e2e": "protractor test/e2e/protractor.config.js"
   },
   "devDependencies": {
     "webpack": "1.13.1",
@@ -39,7 +40,12 @@
     "source-map-loader": "0.1.5",
     "remap-istanbul": "0.6.4",
     "istanbul": "0.4.4",
-    "istanbul-instrumenter-loader": "0.2.0"
+    "istanbul-instrumenter-loader": "0.2.0",
+    "protractor": "3.3.0",
+    "chai": "3.5.0",
+    "chai-as-promised": "5.3.0",
+    "cucumber": "1.2.1",
+    "protractor-cucumber-framework": "0.6.0"
   },
   "dependencies": {
     "@angular/common": "2.0.0-rc.4",
