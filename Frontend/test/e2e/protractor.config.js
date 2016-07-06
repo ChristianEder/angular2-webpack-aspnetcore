@@ -13,7 +13,8 @@
 
     // relevant cucumber command line options
     cucumberOpts: {
-        require: './steps/*.js',
-        format: 'pretty'
+        require: './steps/*.ts',
+        format: 'pretty',
+        compiler: "ts:ts-node/register"
     }
 };

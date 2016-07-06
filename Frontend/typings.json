@@ -4,6 +4,11 @@
     "hammerjs": "github:DefinitelyTyped/DefinitelyTyped/hammerjs/hammerjs.d.ts"
   },
   "globalDevDependencies": {
-    "jasmine": "registry:dt/jasmine"
+    "jasmine": "registry:dt/jasmine",
+    "protractor": "registry:dt/angular-protractor",
+    "selenium-webdriver": "registry:dt/selenium-webdriver",
+    "chai": "registry:dt/chai",
+    "chai-as-promised": "registry:dt/chai-as-promised",
+    "promises-a-plus": "registry:dt/promises-a-plus"
   }
 }
