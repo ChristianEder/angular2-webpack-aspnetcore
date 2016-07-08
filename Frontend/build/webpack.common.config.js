@@ -1,14 +1,10 @@
-﻿var webpack = require("webpack");
+﻿const path = require("path");
 
 module.exports = {
     entry: {
         app: './app/app.ts',
         vendor: './app/vendor.ts'
-    },
-    output: {
-        path: __dirname,
-        filename: '../wwwroot/[name].js'
-    },
+    },    
     resolve: {
         extensions: ['', '.js', '.ts', '.html']
     },
@@ -20,7 +16,7 @@ module.exports = {
             {
                 test: /\.png$/, loader: "file", query: {
                     emitFile: true,
-                    name: "../wwwroot/assets/images/[name].[ext]"
+                    name: "./assets/images/[name].[ext]"
                 }
             },
             //{ test: /\.gif$/, loader: "url-loader?mimetype=image/gif" },
@@ -30,7 +26,6 @@ module.exports = {
         ]
     },
     plugins: [
-		require('webpack-fail-plugin'),
-          new webpack.optimize.CommonsChunkPlugin("vendor", "../wwwroot/[name].js")
+		require('webpack-fail-plugin')
     ]
 };
