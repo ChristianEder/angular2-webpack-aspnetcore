@@ -20,3 +20,6 @@ However, this project template is 100% functional also when
 - npm run dev
 - Open http://localhost:8080/webpack-dev-server/wwwroot/Index.html in a browser
 - The application should be shown
+
+# Preconfigured commands
+- "npm run build" builds the application in release mode, minifying output and without sourcemaps
