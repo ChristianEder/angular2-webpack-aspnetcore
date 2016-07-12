@@ -8,7 +8,6 @@ module.exports = webpackMerge(commonConfig, {
         path: __dirname,
         filename: '[name].js',
         publicPath: "/wwwroot/"
-
     },
     plugins: [
           new webpack.optimize.CommonsChunkPlugin("vendor", "[name].js")

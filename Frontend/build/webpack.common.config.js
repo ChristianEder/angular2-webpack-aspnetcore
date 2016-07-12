@@ -11,7 +11,7 @@ module.exports = {
     module: {
         loaders: [
             { test: /\.html$/, loader: 'raw' },
-            { test: /\.ts$/, loader: 'ts' },
+            { test: /\.ts$/, loader: 'ts-loader' },
             { test: /\.css$/, loaders: ['css-to-string-loader', 'css-loader'] },
             {
                 test: /\.png$/, loader: "file", query: {
