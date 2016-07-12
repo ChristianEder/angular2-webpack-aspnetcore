@@ -16,7 +16,7 @@ module.exports = {
             {
                 test: /\.png$/, loader: "file", query: {
                     emitFile: true,
-                    name: "./assets/images/[name].[ext]"
+                    name: "assets/images/[name].[ext]"
                 }
             },
             //{ test: /\.gif$/, loader: "url-loader?mimetype=image/gif" },

@@ -3,12 +3,14 @@ const webpackMerge = require('webpack-merge');
 const commonConfig = require('./webpack.common.config');
 
 module.exports = webpackMerge(commonConfig, {
-    devtool: 'source-map',
+    devtool: 'cheap-module-source-map',
     output: {
         path: __dirname,
-        filename: '../wwwroot/[name].js'
+        filename: '[name].js',
+        publicPath: "/wwwroot/"
+
     },
     plugins: [
-          new webpack.optimize.CommonsChunkPlugin("vendor", "../wwwroot/[name].js")
+          new webpack.optimize.CommonsChunkPlugin("vendor", "[name].js")
     ]
 });
