@@ -6,7 +6,8 @@
     "postinstall": "typings install && webdriver-manager update",
     "build": "webpack --config build/webpack.prod.config.js",
     "dev": "webpack-dev-server --config build/webpack.dev.config.js",
-    "test": "karma start test/unit/karma.conf.js",
+    "test": "karma start test/unit/karma.test.conf.js",
+    "test-coverage": "karma start test/unit/karma.coverage.conf.js",
     "e2e": "protractor test/e2e/protractor.config.js"
   },
   "devDependencies": {
