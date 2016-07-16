@@ -9,10 +9,15 @@
     .main .icon {
         width: 50px;
         height: 50px;
-        background-image: url('frauenkirche.png');
         float:left;
     }
 
     .main .text {
         float:left;
+    }
+
+    .main poke-area {
+       	display: block;
+        width: 400px;
+        height: 400px;
     }

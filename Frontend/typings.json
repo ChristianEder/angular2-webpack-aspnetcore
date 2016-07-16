@@ -9,6 +9,7 @@
     "selenium-webdriver": "registry:dt/selenium-webdriver",
     "chai": "registry:dt/chai",
     "chai-as-promised": "registry:dt/chai-as-promised",
-    "promises-a-plus": "registry:dt/promises-a-plus"
+    "promises-a-plus": "registry:dt/promises-a-plus",
+    "lodash": "registry:dt/lodash"
   }
 }

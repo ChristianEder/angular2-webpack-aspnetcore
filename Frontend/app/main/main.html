@@ -1,12 +1,10 @@
 ﻿<div class="main">
-    <div class="icon"></div>
-    <div class="text">App main content</div>
-
-   <div>
-       <input type="text" [(ngModel)]="input" id="translationInput" />
-       <button md-raised-button class="md-raised md-primary" (click)="translate()" id="translationButton">Hello</button>
-       <div [innerHTML]="output" id="translationOutput"></div>
-   </div>
-
-
+  <poke-area  [pokemons]="pokemons"
+              [trainer]="trainer"
+              [width]="40" 
+              [height]="40">
+  </poke-area>
+  <poke-code></poke-code>
+  <button (click)="togglePlay()">Move'm</button>
+  <poke-controls></poke-controls>
 </div>

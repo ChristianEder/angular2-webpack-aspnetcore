@@ -1,0 +1,27 @@
+.poke-area-grass {
+	position: relative;
+	width:100%;
+	height:100%;
+	background-color: lightgreen;
+}
+
+.pokemon {
+	width:25px;
+	height:25px;
+	position: absolute;
+	transition: left 0.5s, top 0.5s;
+}
+
+.pokemon img {
+	width:25px;
+	height:25px;
+}
+
+.trainer {
+	width:25px;
+	height:25px;
+	background-image: url("pokeball.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+	position : absolute;
+}

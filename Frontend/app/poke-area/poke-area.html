@@ -1,0 +1,11 @@
+<div class="poke-area-grass">
+	<div 	*ngFor="let pokemon of pokemons" 
+			class="pokemon"
+			[ngStyle]="stylePokemon(pokemon)"
+			[title]="pokemon.name">
+		<img [src]="pokemon.image" />
+	</div>
+	<div class="trainer"
+		[ngStyle]="styleTrainer()">
+	</div>
+</div>

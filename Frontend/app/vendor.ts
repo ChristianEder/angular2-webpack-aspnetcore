@@ -1,6 +1,7 @@
 ﻿
 import 'zone.js/dist/zone.min.js';
 import 'reflect-metadata';
+import 'lodash';
 
 import '@angular/platform-browser';
 import '@angular/platform-browser-dynamic';
