@@ -1,3 +1,10 @@
+export interface IFence {
+	left: number;
+	right: number;
+	top: number;
+	bottom: number;
+}
+
 export class Pokemon {
 	constructor (
 		public name: string,
@@ -5,16 +12,23 @@ export class Pokemon {
 		public strength: number,
 		public image: string,
 		public x: number,
-		public y: number){
-}
+		public y: number){}
 
-clone(){
-	return new Pokemon(this.name,
-	this.type,
-	this.strength,
-	this.image,
-	this.x, this.y);	
-}
+	clone(){
+		return new Pokemon(this.name,
+			this.type,
+			this.strength,
+			this.image,
+			this.x, this.y);	
+	}
+	
+	move(within: IFence){
+		this.x += _.random(-1,1);
+        this.x = Math.max(within.left + 1, Math.min(this.x, within.right - 1));
+		
+		this.y += _.random(-1,1);
+		this.y = Math.max(within.top + 1, Math.min(this.y, within.bottom - 1));
+	}
 }
 
 export const Pokemons : Pokemon[] = [

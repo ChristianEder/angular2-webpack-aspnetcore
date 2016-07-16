@@ -1,11 +1,22 @@
-<div class="poke-area-grass">
-	<div 	*ngFor="let pokemon of pokemons" 
-			class="pokemon"
-			[ngStyle]="stylePokemon(pokemon)"
-			[title]="pokemon.name">
-		<img [src]="pokemon.image" />
-	</div>
-	<div class="trainer"
-		[ngStyle]="styleTrainer()">
+<div class="poke-area-fence">
+	<div class="poke-area-grass">
+		<div 	*ngFor="let pokemon of pokemons" 
+				class="pokemon"
+				[ngStyle]="stylePokemon(pokemon)"
+				[title]="pokemon.name">
+			<img [src]="pokemon.image" />
+		</div>
+		
+		<div 	*ngFor="let pokemon of catchedPokemons" 
+				class="pokemon catched"
+				[ngStyle]="stylePokemon(pokemon)"
+				[title]="pokemon.name">
+			<img [src]="pokemon.image" />
+		</div>
+		
+		<div class="trainer"
+			[ngClass]="{'catched': trainerCatched}"
+			[ngStyle]="styleTrainer()">
+		</div>
 	</div>
 </div>

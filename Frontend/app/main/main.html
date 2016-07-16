@@ -1,8 +1,10 @@
 ﻿<div class="main">
   <poke-area  [pokemons]="pokemons"
+              [catchedPokemons]="catchedPokemons"
               [trainer]="trainer"
-              [width]="40" 
-              [height]="40">
+              [trainerCatched]="trainerCatched"
+              [width]="fence.right - fence.left - 1" 
+              [height]="fence.bottom - fence.top - 1">
   </poke-area>
   <poke-code></poke-code>
   <button (click)="togglePlay()">Move'm</button>

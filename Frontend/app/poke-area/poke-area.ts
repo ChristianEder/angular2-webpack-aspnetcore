@@ -3,11 +3,7 @@ import { Component, Input } from '@angular/core';
 import { MD_BUTTON_DIRECTIVES } from '@angular2-material/button';
 import { MD_INPUT_DIRECTIVES } from '@angular2-material/input';
 import {Pokemon} from '../pokemons/pokemon';
-
-export interface IPokeAreaTrainer {
-	x: number;
-	y: number;
-}
+import {ITrainer} from '../trainer/trainer';
 
 @Component({
     selector: 'poke-area',
@@ -15,8 +11,10 @@ export interface IPokeAreaTrainer {
     styles: [require("./poke-area.css")]
 })
 export class PokeArea {
+    @Input() catchedPokemons : Pokemon[] = [];
     @Input() pokemons : Pokemon[] = [];
-    @Input() trainer : IPokeAreaTrainer = {x: 0, y:0};
+    @Input() trainer : ITrainer;
+    @Input() trainerCatched: boolean = false;
     @Input() width : number = 40;
     @Input() height : number = 40;
     

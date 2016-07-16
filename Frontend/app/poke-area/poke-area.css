@@ -1,7 +1,15 @@
-.poke-area-grass {
+.poke-area-fence{
 	position: relative;
 	width:100%;
 	height:100%;
+	background-color: darkgreen;
+}
+
+.poke-area-grass {
+	position: absolute;
+	margin: 15px;
+	width: calc(100% - 30px);
+	height: calc(100% - 30px);
 	background-color: lightgreen;
 }
 
@@ -12,9 +20,31 @@
 	transition: left 0.5s, top 0.5s;
 }
 
+@keyframes fade-out {
+    from {opacity: 1}
+    to {opacity: 0}
+}
+
+.pokemon.catched {
+	animation-name: fade-out;
+    animation-duration: 1s;
+	animation-fill-mode: forwards;
+}
+
 .pokemon img {
 	width:25px;
 	height:25px;
+}
+
+@keyframes trainer-catched { 
+	50% {
+		-webkit-transform: scale(1.5) rotate(180deg); 
+		transform:scale(1.5) rotate(180deg); 
+	}
+	100% { 
+		-webkit-transform: rotate(360deg); 
+		transform:rotate(360deg); 
+	} 
 }
 
 .trainer {
@@ -24,4 +54,11 @@
 	background-repeat: no-repeat;
 	background-size: contain;
 	position : absolute;
+	transition: left 0.5s, top 0.5s;
+}
+
+.trainer.catched {
+	animation-name: trainer-catched;
+    animation-duration: 1s;
+	animation-fill-mode: forwards;
 }
