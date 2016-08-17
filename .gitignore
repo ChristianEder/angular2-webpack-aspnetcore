@@ -5,7 +5,8 @@
 /Frontend/bin
 /Frontend/obj
 /Frontend/node_modules
-/Frontend/typings
+/Frontend/typings/*
+!/Frontend/typings/custom.d.ts
 /Frontend/wwwroot/vendor.js.map
 /Frontend/wwwroot/vendor.js
 /Frontend/wwwroot/app.js.map
