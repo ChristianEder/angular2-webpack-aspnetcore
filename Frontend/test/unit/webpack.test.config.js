@@ -11,7 +11,7 @@
         module: {
             loaders: [
                 { test: /\.html$/, loader: 'raw' },
-                { test: /\.ts$/, loader: 'ts' },
+                { test: /\.ts$/, loader: 'ts', query: { configFileName: measureCoverage ? "tsconfig.coverage.json" : "tsconfig.json" } },
                 { test: /\.css$/, loaders: ['css-to-string-loader', 'css-loader'] },
                 {
                     test: /\.png$/, loader: "file", query: {
