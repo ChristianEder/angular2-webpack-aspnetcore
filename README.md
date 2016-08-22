@@ -27,3 +27,4 @@ However, this project template is 100% functional also when
 - "npm run test" runs the unit tests. If you reconfigure karma to let the browser stay open, you can debug tests in the TypeScript source code
 - "npm run test-coverage" runs the unit tests with code coverage instrumentation and analyis enabled. Puts coverage results in the "Frontend/test/unit/coverage" subfolder. The first run will create only create coverage results based on the JavaScript code transpiled from TypeScript source code. Each subsequent run will also remap the results of the previous run to the TypeScript sources. This is a workaround until https://github.com/ChristianEder/angular2-webpack-aspnetcore/issues/1 is resolved
 - "npm run e2e" runs the protractor UI tests
+  - The protractor tests assume the application is running on http://localhost:50775, not just in the webpack dev server. To host the app there, run "dotnet restore" and "dotnet run" in the "Frontend" folder 
