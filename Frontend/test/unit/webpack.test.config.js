@@ -1,4 +1,5 @@
-﻿module.exports = function (measureCoverage) {
+﻿const webpack = require("webpack");
+module.exports = function (measureCoverage) {
     return {
         resolve: {
             root: __dirname,

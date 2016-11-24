@@ -1,14 +1,9 @@
-﻿/// <reference path="../../typings/custom.d.ts" />
-import { Component } from '@angular/core';
-import { MD_BUTTON_DIRECTIVES } from '@angular2-material/button';
-import { MD_INPUT_DIRECTIVES } from '@angular2-material/input';
-
+﻿import { Component } from '@angular/core';
 
 @Component({
     selector: 'app-main',
     template: require("./main.html"),
-    styles: [require("./main.css")],
-    directives: [MD_BUTTON_DIRECTIVES, MD_INPUT_DIRECTIVES]
+    styles: [require("./main.css")]
 })
 export class AppMain {
     input = "Hallo";

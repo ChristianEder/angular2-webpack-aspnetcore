@@ -1,4 +1,5 @@
 ﻿import {Page} from "./page";
+import {browser, element, by} from "protractor";
 
 export class MainPage extends Page {
 
