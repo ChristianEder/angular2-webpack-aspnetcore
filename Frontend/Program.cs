@@ -12,7 +12,6 @@ namespace Frontend
                 .UseContentRoot(Directory.GetCurrentDirectory())
                 .UseIISIntegration()
                 .UseStartup<Startup>()
-                .UseUrls("http://localhost:50775/")
                 .Build();
 
             host.Run();
